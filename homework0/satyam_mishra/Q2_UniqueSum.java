@@ -22,6 +22,7 @@ public class Q2_UniqueSum {
 
         return totalSum;
     }
+    
     public static void main(String[] args) {
         // TEST CASES
         int[] arr1 = {1, 10, 8, 3, 2, 5, 7, 2, -2, -1};

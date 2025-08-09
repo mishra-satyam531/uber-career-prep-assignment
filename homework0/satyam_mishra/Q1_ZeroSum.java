@@ -22,6 +22,7 @@ public class Q1_ZeroSum {
 
         return countPairs;
     }
+
     private static int numberOfPairs(int[] arr) {
         Map<Integer, Integer> frequency = new HashMap<>(); // to store frequency
 
@@ -38,6 +39,7 @@ public class Q1_ZeroSum {
 
         return countPairs;
     }
+    
     public static void main(String[] args) {
         // TEST CASES 
         int[] arr1 = {1, 10, 8, 3, 2, 5, 7, 2, -2, -1};

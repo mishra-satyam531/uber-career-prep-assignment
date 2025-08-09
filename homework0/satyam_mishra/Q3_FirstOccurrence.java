@@ -25,7 +25,7 @@ public class Q3_FirstOccurrence {
         }
 
         return ans.toString();
-    }
+    } 
 
     public static void main(String[] args) {
         String str1 = "abracadabra";
