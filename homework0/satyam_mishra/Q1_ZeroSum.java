@@ -12,27 +12,27 @@ import java.util.HashMap;
 public class Q1_ZeroSum {
     // FOllOW-UP
     private static int numberOfPairsFollowUp(int[] arr) {
-        Map<Integer, Integer> frequency = new HashMap<>();
+        Map<Integer, Integer> frequency = new HashMap<>(); // to store frequency
         
         int countPairs = 0;
         for(int ele : arr) {
-            countPairs += frequency.getOrDefault(-ele, 0);
+            countPairs += frequency.getOrDefault(-ele, 0); // increase count by number of "-ele" frequency present in map (each index can be used multiple times)
             frequency.put(ele, frequency.getOrDefault(ele, 0) + 1);
         }
 
         return countPairs;
     }
     private static int numberOfPairs(int[] arr) {
-        Map<Integer, Integer> frequency = new HashMap<>();
+        Map<Integer, Integer> frequency = new HashMap<>(); // to store frequency
 
         int countPairs = 0;
         for(int ele : arr) {
             if(frequency.containsKey(-ele)) {
-                countPairs++;
-                frequency.put(-ele, frequency.getOrDefault(ele, 0) - 1);
+                countPairs++; // increase count by 1 after finding one valid pair
+                frequency.put(-ele, frequency.getOrDefault(ele, 0) - 1); // remove one occurence after finding one valid pair(as we can usre element at each index onlky once)
                 if(frequency.get(-ele) == 0) frequency.remove(-ele);
             } else {
-                frequency.put(ele, frequency.getOrDefault(ele, 0) + 1);
+                frequency.put(ele, frequency.getOrDefault(ele, 0) + 1); // increase the frequency of element by 1 if pair not found
             }
         }
 

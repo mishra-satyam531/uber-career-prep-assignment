@@ -14,12 +14,12 @@ import java.util.Set;
 
 public class Q3_FirstOccurrence {
     private static String firstOccurence(String str) {
-        Set<Character> occurence = new HashSet<>();
+        Set<Character> occurence = new HashSet<>(); // set to store unique elements
 
         StringBuilder ans = new StringBuilder();
         for (char ch : str.toCharArray()) {
             if (!occurence.contains(ch)) {
-                ans.append(ch);
+                ans.append(ch); // if the element wasn't seen before then add it to the ans
             }
             occurence.add(ch);
         }

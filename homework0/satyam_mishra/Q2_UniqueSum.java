@@ -10,12 +10,12 @@ import java.util.Set;
 
 public class Q2_UniqueSum {
     private static int sumOfUniqueElements(int[] arr) {
-        Set<Integer> unique = new HashSet<>();
+        Set<Integer> unique = new HashSet<>(); // set to store unique elements
 
         int totalSum = 0;
         for(int ele : arr) {
             if(!unique.contains(ele)) {
-                totalSum += ele;
+                totalSum += ele; // add the unique elements to the totalSum
             }
             unique.add(ele);
         }
